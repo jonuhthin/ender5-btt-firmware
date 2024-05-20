@@ -84,7 +84,7 @@
  */
 
 // Show the Marlin bootscreen on startup. ** ENABLE FOR PRODUCTION **
-#define SHOW_BOOTSCREEN
+// #define SHOW_BOOTSCREEN
 
 // Show the bitmap in Marlin/_Bootscreen.h on startup.
 //#define SHOW_CUSTOM_BOOTSCREEN
@@ -115,7 +115,7 @@
  *
  * :[2400, 9600, 19200, 38400, 57600, 115200, 250000, 500000, 1000000]
  */
-#define BAUDRATE 115200
+#define BAUDRATE 250000
 //#define BAUD_RATE_GCODE     // Enable G-code M575 to set the baud rate
 
 /**
@@ -143,7 +143,7 @@
 #endif
 
 // Name displayed in the LCD "Ready" message and Info menu
-#define CUSTOM_MACHINE_NAME "Ender-3"
+#define CUSTOM_MACHINE_NAME "Enderita"
 
 // Printer's unique ID, used by some programs to differentiate between machines.
 // Choose your own or use a service like https://www.uuidgenerator.net/version4
@@ -1330,9 +1330,9 @@
 // @section machine
 
 // Invert the stepper direction. Change (or reverse the motor connector) if an axis goes the wrong way.
-#define INVERT_X_DIR true
-#define INVERT_Y_DIR true
-#define INVERT_Z_DIR false
+#define INVERT_X_DIR false
+#define INVERT_Y_DIR false
+#define INVERT_Z_DIR true
 //#define INVERT_I_DIR false
 //#define INVERT_J_DIR false
 //#define INVERT_K_DIR false
@@ -1378,8 +1378,8 @@
 // @section machine
 
 // The size of the printable area
-#define X_BED_SIZE 235
-#define Y_BED_SIZE 235
+#define X_BED_SIZE 220
+#define Y_BED_SIZE 220
 
 // Travel limits (mm) after homing, corresponding to endstop positions.
 #define X_MIN_POS 0
@@ -1387,7 +1387,7 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
-#define Z_MAX_POS 250
+#define Z_MAX_POS 300
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -2916,10 +2916,10 @@
   //#define NEOPIXEL_PIN     4     // LED driving pin
   //#define NEOPIXEL2_TYPE NEOPIXEL_TYPE
   //#define NEOPIXEL2_PIN    5
-  #define NEOPIXEL_PIXELS 10       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
+  #define NEOPIXEL_PIXELS 100       // Number of LEDs in the strip. (Longest strip when NEOPIXEL2_SEPARATE is disabled.)
   #define NEOPIXEL_IS_SEQUENTIAL   // Sequential display for temperature change - LED by LED. Disable to change all LEDs at once.
   #define NEOPIXEL_BRIGHTNESS 127  // Initial brightness (0-255)
-  //#define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
+  // #define NEOPIXEL_STARTUP_TEST  // Cycle through colors at startup
 
   // Support for second Adafruit NeoPixel LED driver controlled with M150 S1 ...
   //#define NEOPIXEL2_SEPARATE
@@ -2950,7 +2950,7 @@
  *  - Turn off after the print has finished and the user has pushed a button
  */
 #if ANY(BLINKM, RGB_LED, RGBW_LED, PCA9632, PCA9533, NEOPIXEL_LED)
-  #define PRINTER_EVENT_LEDS
+  // #define PRINTER_EVENT_LEDS 
 #endif
 
 /**

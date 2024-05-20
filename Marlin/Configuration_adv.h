@@ -1337,7 +1337,7 @@
   //#define LCD_TIMEOUT_TO_STATUS 15000
 
   #if ENABLED(SHOW_BOOTSCREEN)
-    #define BOOTSCREEN_TIMEOUT 4000      // (ms) Total Duration to display the boot screen(s)
+    #define BOOTSCREEN_TIMEOUT 1      // (ms) Total Duration to display the boot screen(s)
     #if EITHER(HAS_MARLINUI_U8GLIB, TFT_COLOR_UI)
       #define BOOT_MARLIN_LOGO_SMALL     // Show a smaller Marlin logo on the Boot Screen (saving lots of flash)
     #endif
@@ -2215,13 +2215,13 @@
 
 // The number of linear moves that can be in the planner at once.
 // The value of BLOCK_BUFFER_SIZE must be a power of 2 (e.g., 8, 16, 32)
-#if BOTH(SDSUPPORT, DIRECT_STEPPING)
-  #define BLOCK_BUFFER_SIZE  8
-#elif ENABLED(SDSUPPORT)
-  #define BLOCK_BUFFER_SIZE 16
-#else
-  #define BLOCK_BUFFER_SIZE 16
-#endif
+// #if BOTH(SDSUPPORT, DIRECT_STEPPING)
+//   #define BLOCK_BUFFER_SIZE  8
+// #elif ENABLED(SDSUPPORT)
+//   #define BLOCK_BUFFER_SIZE 16
+// #else
+//   #define BLOCK_BUFFER_SIZE 16
+// #endif
 
 #define BLOCK_BUFFER_SIZE 64
 
